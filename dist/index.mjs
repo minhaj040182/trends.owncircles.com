@@ -33318,7 +33318,7 @@ var staticDir = path.resolve(
 );
 if (existsSync(staticDir)) {
   app.use(import_express4.default.static(staticDir));
- app.get("/*", (_req, res) => {
+  app.get("/{*path}", (_req, res) => {
   res.sendFile(path.join(staticDir, "index.html"));
 });
 }
