@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+    <title>Trending Tube</title>
+    <meta name="description" content="Trending Tube — built on Replit. Update this description to reflect the app." />
+    <meta name="robots" content="index, follow" />
+    <meta property="og:title" content="Trending Tube" />
+    <meta property="og:description" content="Trending Tube — built on Replit. Update this description to reflect the app." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Trending Tube" />
+    <meta name="twitter:description" content="Trending Tube — built on Replit. Update this description to reflect the app." />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script type="module" crossorigin src="/assets/index-DLsMO4Ob.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-DxsZo9MC.css">
+  </head>
+  <body>
+    <div id="root"></div>
+    <!-- Suppress cross-origin SecurityErrors from third-party ad scripts
+         trying to inspect the YouTube iframe. Must run before any module
+         (including Vite's error overlay) so it intercepts first. -->
+    <script>
+      (function () {
+        var PATTERNS = ['cross-origin', 'Permission denied to access property', 'cross origin'];
+        function isSuppressed(msg) {
+          if (!msg) return false;
+          for (var i = 0; i < PATTERNS.length; i++) {
+            if (msg.indexOf(PATTERNS[i]) !== -1) return true;
+          }
+          return false;
+        }
+        window.addEventListener('error', function (e) {
+          if (isSuppressed(e.message)) { e.preventDefault(); e.stopImmediatePropagation(); return false; }
+        }, true);          /* capture phase — fires before Vite's bubble-phase handler */
+        window.addEventListener('unhandledrejection', function (e) {
+          var msg = (e.reason && e.reason.message) ? e.reason.message : String(e.reason || '');
+          if (isSuppressed(msg)) { e.preventDefault(); }
+        }, true);
+      })();
+    </script>
+  </body>
+</html>

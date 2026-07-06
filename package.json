@@ -1,0 +1,12 @@
+{
+  "name": "trending-tube",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Trending Tube – YouTube trending video site",
+  "scripts": {
+    "start": "node dist/index.mjs"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
